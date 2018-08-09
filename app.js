@@ -6,3 +6,12 @@ list.addEventListener('click', function(e) {
       list.removeChild(li) 
   }
 })
+
+//add books
+const addForm = document.forms['add-book'];
+
+addForm.addEventListener('submit', function(e){
+    e.preventDefault();
+    const value = addForm.querySelector('input[type="text"]').value;
+    console.log(value);
+})
