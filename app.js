@@ -23,6 +23,11 @@ const deleteBtn = document.createElement('span');
 deleteBtn.textContent = "Delete";
 bookName.textContent = value;
 
+//add classes
+
+bookName.classList.add('name');
+deleteBtn.classList.add('delete');
+
 //append to DOM
 li.appendChild(bookName);
 li.appendChild(deleteBtn);
