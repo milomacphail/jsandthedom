@@ -13,6 +13,18 @@ const addForm = document.forms['add-book'];
 addForm.addEventListener('submit', function(e){
     e.preventDefault();
     const value = addForm.querySelector('input[type="text"]').value;
+
+//hide books
+
+const hideBox = document.querySelector('#hide');
+hideBox.addEventListener('change', function(e){
+  if (hideBox.checked){
+    list.style.display="none";
+  } else {
+    list.style.display= "block"
+  }
+});
+
 //create elements
 
 const li = document.createElement('li');
@@ -33,3 +45,4 @@ li.appendChild(bookName);
 li.appendChild(deleteBtn);
 list.appendChild(li);
 })
+
